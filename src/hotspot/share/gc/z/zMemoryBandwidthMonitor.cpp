@@ -21,11 +21,13 @@ public:
 };
 
 ZMemoryBandwidthMonitor::ZMemoryBandwidthMonitor() {
-  _enabled = ZUseMemoryBandwidthMonitor;
-  _monitor = this;
+  _enabled = ZUseBW;
 
   if(_enabled) {
     log_info(gc, zbw)("➡️  Starting memory bandwidth monitor");
+    
+    _monitor = this;
+
     set_name("ZMemoryBandwidthMonitor");
     create_and_start();
   }

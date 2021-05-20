@@ -52,6 +52,7 @@ ZCollectedHeap::ZCollectedHeap() :
     _director(new ZDirector()),
     _driver(new ZDriver()),
     _stat(new ZStat()),
+    _memory_bandwidth_monitor(new ZMemoryBandwidthMonitor()),
     _runtime_workers() {}
 
 CollectedHeap::Name ZCollectedHeap::kind() const {

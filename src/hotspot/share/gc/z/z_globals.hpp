@@ -74,7 +74,7 @@
   product(bool, ZVerifyForwarding, false, DIAGNOSTIC,                       \
           "Verify forwarding tables")                                       \
                                                                             \
-  product(bool, ZUseMemoryBandwidthMonitor, false,                          \
+  product(bool, ZUseBW, false,                                              \
           "Measure memory bandwidth usage in ZGC")                          \
           
 // end of GC_Z_FLAGS

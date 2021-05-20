@@ -30,6 +30,7 @@
 #include "gc/z/zHeap.hpp"
 #include "gc/z/zInitialize.hpp"
 #include "gc/z/zRuntimeWorkers.hpp"
+#include "gc/z/zMemoryBandwidthMonitor.hpp"
 
 class ZDirector;
 class ZDriver;
@@ -46,6 +47,7 @@ private:
   ZDirector*        _director;
   ZDriver*          _driver;
   ZStat*            _stat;
+  ZMemoryBandwidthMonitor* _memory_bandwidth_monitor;
   ZRuntimeWorkers   _runtime_workers;
 
   virtual HeapWord* allocate_new_tlab(size_t min_size,
