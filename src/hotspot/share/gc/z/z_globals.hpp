@@ -72,8 +72,11 @@
           "Verify marking stacks")                                          \
                                                                             \
   product(bool, ZVerifyForwarding, false, DIAGNOSTIC,                       \
-          "Verify forwarding tables")
-
+          "Verify forwarding tables")                                       \
+                                                                            \
+  product(bool, ZUseMemoryBandwidthMonitor, false,                          \
+          "Measure memory bandwidth usage in ZGC")                          \
+          
 // end of GC_Z_FLAGS
 
 #endif // SHARE_GC_Z_Z_GLOBALS_HPP
