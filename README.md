@@ -1,11 +1,14 @@
-# Welcome to the JDK!
+# ZGC Memory Bandwidth Monitoring
 
-For build instructions please see the
-[online documentation](https://openjdk.java.net/groups/build/doc/building.html),
-or either of these files:
+This is a patch to ZGC that enables sampling the memory bandwidth usage of 
+garbage collector threads. It uses the `resctrl` kernel module to access the 
+necessary performance counters exposed by Intel(R) RDT (MBM). Samples are 
+logged with the tag `gc+zbw+stats`.
 
-- [doc/building.html](doc/building.html) (html version)
-- [doc/building.md](doc/building.md) (markdown version)
+Prerequisites:
+* Compatible Xeon CPU (Tested on 2nd generation Xeon Scalable, see intel-cmt-cat for a full list)
+* `resctrl` kernel module `rdt=mbmtotal`
+* Must be run as root
 
-See <https://openjdk.java.net/> for more information about
-the OpenJDK Community and the JDK.
+![Example run](16g.png)
+

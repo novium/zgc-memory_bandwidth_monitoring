@@ -2,8 +2,8 @@
 
 SPEC_FOLDER = '../specjbb'
 JAVA_PATH   = '../zgc-bw/build/linux-x86_64-server-release/jdk/bin/java'
-JAVA_XMX    = '16g'
-JAVA_XMS    = '16g'
+JAVA_XMX    = '96g'
+JAVA_XMS    = '96g'
 
 import os
 import subprocess
